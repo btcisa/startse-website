@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html, body {
+    height: 100vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+/*HEADER*/
+
+header {
+    background-color: #0080ed;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 980px;
+    height: 80px;
+    margin: auto;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 24px;
+    transition: all 250ms linear 0s;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+header .container img {
+    height: 30px;
+}
+
+/*MAIN*/
+
+main {
+    margin-bottom: 100px;
+}
+
+main .container-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 100px auto 0px auto;
+}
+
+h2 {
+    color:rgb(0,0,0);
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+h3 {
+    color: rgb(131, 131, 131);
+    font-size: 20px;
+    line-height: 28px;
+    margin: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input, textarea {
+    width: 380px;
+    padding-left: 15px;
+    font-size: 18px;
+    height: 45px;
+    margin-bottom: 13px;
+    border-radius: 20px;
+    border: 2px solid #0080ed
+}
+
+form [type="submit"] {
+    background-color: #0080ed;
+    color: #ffffff;
+}
+
+form [type="submit"]:hover {
+    cursor: pointer;
+}
+
+main .container-main img {
+    width: 600px;
+}
+
+/*CARDS*/
+
+.cards {
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.text--medium {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: rgb(187,185,185);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px -4px rgb(0,0,0);
+    transition: all 0.3s ease 0s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.image {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image img {
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    margin: 20px;
+}
+
+.title {
+    margin-bottom: 0px;
+}
+
+/*CONTATO*/
+
+.contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .contact-content {
+    max-width: 980px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.container-content .contact-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-content .contact-info .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container-content .contact-info .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #0080ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container-content .contact-info .box .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.contact-form .imput-box {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-form .imput-box input {
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 10px;
+    outline: none;
+}
+
+.contact-form .imput-box textarea{
+    height: 100px; 
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 10px;
+    outline: none;
+}
+
+.contact-form .imput-box span {
+   position: absolute;
+   left: 0;
+   padding-left: 10px;
+   font-size: 16px;
+   margin: 20px 10px;
+   pointer-events: none;
+   transition: 0.5s;
+   color: #666;
+}
+
+.contact-form .imput-box input:focus ~ span,
+.contact-form .imput-box input:valid ~ span,
+.contact-form .imput-box textarea:focus ~ span,
+.contact-form .imput-box textarea:valid ~ span 
+{
+    color: #0080ed;
+    font-size: 12px;
+    transform: translateY(-25px);
+}
